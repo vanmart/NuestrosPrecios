@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="elagant">#660033</color> 
+    <color name="blanco">#ffffff</color>
+    <color name="azul_claro">#2fe3ff</color>
+    <color name="azul_oscuro">#035665</color>
+    <color name="negro">#000000</color>
+    <color name="dorado">#D7DF01</color>
+    <color name="transparente">#00000000</color>
+</resources>

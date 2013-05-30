@@ -1,0 +1,36 @@
+<resources>
+
+    <string name="app_name">NuestrosPrecios</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_intro">Nuestros Precio$</string>
+    <string name="user_name">Nombre de Usuario</string>
+    <string name="password">Contraseña</string>
+    <string name="welcome">Bienvenid@ a Nuestros precios</string>
+    <string name="welcome2">Todos los precios en tus manos.</string>
+    <string name="send">Enviar</string>
+    <string name="enter">ENTRAR</string>
+    <string name="cancel">Cancelar</string>
+    <string name="hint_browser_bar_txt">buscar precios de: </string>
+    <string name="register">Registrarme</string>
+    <string name="btn_creat_virtual_shop">Crear Tienda Virtual </string>
+    <string name="password_confirmation">Confirma tu contraseña</string>
+    <string name="email">email</string>
+    <string name="log_in">Inicar Sesion</string>
+    <string name="create_account">Crear Cuenta</string>
+    <string name="location">Hubicacion</string>
+    <string name="by_movilbrains">By MovilBrain$</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_register">Registro</string>
+    <string name="title_activity_log_in">Log in</string>
+    <string name="title_activity_sing_in">Sing_in</string>
+    <string name="title_activity_browser">Browser</string>
+    <string name="title_activity_browser_view1">Browser</string>
+    <string name="title_activity_finder">Finder</string>
+    <string name="title_activity_gallery_view">GalleryView</string>
+    <string name="customize_welcome">Nuestros Precio$</string>
+    <string name="intro_message">CREA TU TIENDA VIRTUAL o busca el precio de lo que necesitas...</string>
+    <string name="intro_message2">NOSOTROS HACEMOS EL RESTO.</string>
+    <string name="title_activity_finder_whit_mozaic_view">Finder whit mozaic_view</string>
+    <string name="title_activity_finder_mozaic">FinderMozaicActivity</string>
+
+</resources>

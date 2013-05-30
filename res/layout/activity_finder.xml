@@ -1,0 +1,86 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    >
+
+    <TextView android:id="@+id/tv_np_title"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/customize_welcome"
+       android:textSize="40sp"
+       android:layout_margin="4dp"
+       android:layout_gravity="center_horizontal"/>
+    
+    <LinearLayout
+        android:id="@+id/ll_search_bar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/et_search_bar"
+            android:layout_width="260dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.17"
+            android:background="@drawable/borde_azul_claro"
+            android:hint="@string/hint_browser_bar_txt"
+            android:gravity="center" 
+            android:layout_margin="3dp"></EditText>
+        <ImageButton
+            android:id="@+id/ibtn_lupa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/lupa"
+            android:clickable="true"
+            />
+    </LinearLayout>
+    
+    <LinearLayout android:id="@+id/publications_container"
+        android:layout_below="@+id/ll_search_bar_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <Gallery
+                android:id="@+id/gallery"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" />
+
+            <ImageSwitcher
+                android:id="@+id/is_show"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" 
+                android:layout_gravity="center"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/container_btn_create_virtual_shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <Button android:id="@+id/btn_create_virtual_shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_creat_virtual_shop"/>
+        </LinearLayout>
+        
+        <ProgressBar android:id="@+id/pb_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:handle="@+id/ibtn_lupa"
+            android:visibility="invisible"
+             />
+
+</LinearLayout>
+
+</LinearLayout>
