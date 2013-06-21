@@ -15,7 +15,7 @@
     <string name="btn_creat_virtual_shop">Crear Tienda Virtual </string>
     <string name="password_confirmation">Confirma tu contraseña</string>
     <string name="email">email</string>
-    <string name="log_in">Inicar Sesion</string>
+    <string name="log_in">Iniciar Sesion</string>
     <string name="create_account">Crear Cuenta</string>
     <string name="location">Hubicacion</string>
     <string name="by_movilbrains">By MovilBrain$</string>
@@ -28,10 +28,13 @@
     <string name="title_activity_finder">Finder</string>
     <string name="title_activity_gallery_view">GalleryView</string>
     <string name="customize_welcome">Nuestros Precio$</string>
-    <string name="intro_message">CREA TU TIENDA VIRTUAL o busca el precio de lo que necesitas.</string>
-    <string name="intro_message2">NOSOTROS HACEMOS EL RESTO.</string>
+    <string name="intro_message">Crea tiendas virtuales ó</string>
+    <string name="intro_message2">encuentra el precio de lo que necesitas.</string>
+    <string name="intro_message3">EN</string>
     <string name="title_activity_finder_whit_mozaic_view">Finder whit mozaic_view</string>
     <string name="title_activity_finder_mozaic">FinderMozaicActivity</string>
     <string name="comapny_image">No Image</string>
+    <string name="search">Buscar</string>
+    
 
 </resources>

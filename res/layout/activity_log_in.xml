@@ -6,8 +6,19 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Log_in" 
-    android:background="@drawable/bordenegro">
+    android:background="@drawable/bg_img_login">
 
+    <TextView
+        android:id="@+id/tv_login_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_marginTop="31dp"
+        android:text="@string/log_in"
+        android:textSize="40sp"
+        android:layout_centerHorizontal="true" />
+    
+    
   <LinearLayout 
         android:id="@+id/login_container"
         android:layout_width="fill_parent"
@@ -16,54 +27,51 @@
         android:gravity="center"
         android:layout_centerInParent="true"
         >
-        
-        <ImageView 
-            android:id="@+id/iv_logo_app"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/logo_app_120x120"/>
-        
         <EditText 
             android:id="@+id/et_user_name"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="@string/user_name"
-            android:background="@drawable/bordeverde"
-            android:gravity="center"/>
+            android:background="@drawable/borde_azul_claro"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:ems="10"/>
        <EditText 
            android:id="@+id/et_password"
            android:layout_width="fill_parent"
            android:layout_height="wrap_content"
            android:hint="@string/password"
-           android:background="@drawable/bordeverde"
+           android:background="@drawable/borde_azul_claro"
            android:gravity="center"
-           android:layout_marginTop="4dp"/>
+           android:layout_margin="10dp"
+           />
         
        <LinearLayout 
             android:id="@+id/ll_btns_login_container"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_below="@+id/contenedor_login"
-            android:layout_centerInParent="true"
              >
             
             <Button 
                 android:id="@+id/btn_send"
-                android:background="@drawable/bordeverde"
+                android:background="@drawable/borde_azul_intro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/send"
-                 />
+                android:textColor="@color/gris_claro"
+                android:layout_margin="10dp" />
             <Button 
                 android:id="@+id/btn_cancel"
-                android:background="@drawable/bordeverde"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/cancel" 
+                android:text="@string/cancel"
+                android:background="@drawable/borde_azul_intro"
+                android:textColor="@color/gris_claro"
+                android:layout_margin="10dp" 
                 />
             
-        </LinearLayout>  
+        </LinearLayout>
                 
     </LinearLayout>
    

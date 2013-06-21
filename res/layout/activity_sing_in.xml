@@ -1,95 +1,112 @@
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bordenegro">
-    
-    
-   <ScrollView android:layout_width="fill_parent"
-       android:layout_height="fill_parent">
-   <!--  <ProgressBar android:id="@+id/pb_sing_in"
+    android:background="@drawable/bg_img_singin"
+    android:orientation="vertical" 
+    android:gravity="fill_vertical">
+
+    <TextView
+        android:id="@+id/register_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:layout_marginTop="31dp"
+        android:textSize="40sp" 
+        android:text="@string/register"
+        android:layout_gravity="center_horizontal"/>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        >
+
+        <!--
+         <ProgressBar android:id="@+id/pb_sing_in"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:handle="@+id/btn_create_account"
        android:visibility="invisible"
-       /> -->
-               
-   <LinearLayout android:id="@+id/ll_sig_in_container"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:orientation="vertical"
-       android:gravity="center"
-       android:isScrollContainer="true"
-       android:background="@drawable/biohazard">
-      
-        <TextView
-            android:id="@+id/register_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:layout_marginTop="31dp"
-            android:text="@string/register"
-            android:textSize="40sp" />
-    
-       
-    
-
-    <LinearLayout
-        android:id="@+id/ll_main_layout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tv_register"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="23dp"
-        android:gravity="center_horizontal|fill_horizontal"
-        android:orientation="vertical" >
-
-        <EditText
-            android:id="@+id/et_name"
+       />
+        -->
+
+        <LinearLayout
+            android:id="@+id/ll_sig_in_container"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:ems="10"
-            android:hint="@string/user_name"
-            android:inputType="text" >
+            android:layout_height="368dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:isScrollContainer="true"
+            android:orientation="vertical" >
 
-            <requestFocus />
-        </EditText>
+            <LinearLayout
+                android:id="@+id/ll_main_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="23dp"
+                android:gravity="center_horizontal|fill_horizontal"
+                android:orientation="vertical" >
 
-        <EditText
-            android:id="@+id/et_email"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/email"
-            android:inputType="textEmailAddress" />
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/borde_azul_claro"
+                    android:ems="10"
+                    android:layout_margin="10dp"
+                    android:hint="@string/user_name"
+                    android:inputType="text" 
+                    android:layout_gravity="center">
 
-        <EditText
-            android:id="@+id/et_password"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/password"
-            android:inputType="textPassword" />
+                    
+                </EditText>
 
-        <EditText
-            android:id="@+id/et_password_confirmation"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="@string/password_confirmation"
-            android:inputType="textPassword" />
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/borde_azul_claro"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:layout_gravity="center" />
 
-    </LinearLayout>
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/borde_azul_claro"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:layout_gravity="center" />
 
-    <Button
-        android:id="@+id/btn_create_account"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ll_main_layout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp"
-        android:text="@string/create_account" />
-    
-    </LinearLayout>
+                <EditText
+                    android:id="@+id/et_password_confirmation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/borde_azul_claro"
+                    android:hint="@string/password_confirmation"
+                    android:inputType="textPassword"
+                    android:layout_gravity="center" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_create_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27dp"
+                android:background="@drawable/borde_azul_intro"
+                android:text="@string/create_account"
+                android:textColor="@color/gris_claro" 
+                android:layout_gravity="center|bottom"/>
+        </LinearLayout>
     </ScrollView>
-    
 
-</RelativeLayout>
+</LinearLayout>

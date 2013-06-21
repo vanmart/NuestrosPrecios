@@ -31,7 +31,7 @@ import android.widget.TextView;
 import android.support.v4.app.NavUtils;
 
 public class Sing_in extends Activity implements OnClickListener {
-	
+
 	private final String LOG_TAG = "LOG";
 	TextView registrarme;
 	EditText name;
@@ -39,81 +39,78 @@ public class Sing_in extends Activity implements OnClickListener {
 	EditText password;
 	EditText password_confirmation;
 	Button create_acount;
-	//private ProgressBar pb_sing_in;
+	// private ProgressBar pb_sing_in;
 	private Handler handler = new Handler();
 	private static int progress;
 	private int progress_status = 0;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sing_in);
-        registrarme = (TextView)findViewById(R.id.register_title);
-        Typeface font = Typeface.createFromAsset(getAssets(), "berlin-sans-fb-demi-bold.ttf");
-	   	registrarme.setTypeface(font);
-        name = (EditText)findViewById(R.id.et_name);
-        email = (EditText)findViewById(R.id.et_email);
-        password = (EditText)findViewById(R.id.et_password);
-        password_confirmation = (EditText)findViewById(R.id.et_password_confirmation);
-      //  pb_sing_in = (ProgressBar)findViewById(R.id.pb_sing_in); 
-        create_acount = (Button)findViewById(R.id.btn_create_account);
-        create_acount.setOnClickListener(this);
-    }
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_sing_in);
+		registrarme = (TextView) findViewById(R.id.register_title);
+		Typeface font = Typeface.createFromAsset(getAssets(),
+				"berlin-sans-fb-demi-bold.ttf");
+		registrarme.setTypeface(font);
+		name = (EditText) findViewById(R.id.et_name);
+		email = (EditText) findViewById(R.id.et_email);
+		password = (EditText) findViewById(R.id.et_password);
+		password_confirmation = (EditText) findViewById(R.id.et_password_confirmation);
+		// pb_sing_in = (ProgressBar)findViewById(R.id.pb_sing_in);
+		create_acount = (Button) findViewById(R.id.btn_create_account);
+		create_acount.setOnClickListener(this);
+	}
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_sing_in, menu);
-        return true;
-    }
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.activity_sing_in, menu);
+		return true;
+	}
 
 	@Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch (v.getId()) {
 		case R.id.btn_create_account:
-		//	         pb_sing_in.setVisibility(0);
-			//         hold();
-			         postData(); 
-			         Intent intent = new Intent(Sing_in.this,Log_in.class);
-			         //pb_sing_in.setVisibility(8);
-			         startActivity(intent);
+			// pb_sing_in.setVisibility(0);
+			// hold();
+			postData();
+			Intent intent = new Intent(Sing_in.this, Log_in.class);
+			// pb_sing_in.setVisibility(8);
+			startActivity(intent);
 			break;
 
 		default:
 			break;
-		}	
-			
-		
+		}
+
 	}
-	
-public void hold(){
-    	
-    	new Thread(new Runnable() {
-    		@Override
-    		public void run() {
-    			while(progress_status < 10){
-    				progress_status = do_some_job();
-    			     }
-    			handler.post(new Runnable() {
-    				@Override
-    				public void run() {
-    					// TODO ---0 VISIBLE; 4 - INVISIBLE; 8 -GONE ---
-              //         pb_sing_in.setVisibility(8);					
-    				}
-    			});
-    			progress_status = 0;
-    			
-    		}
-    		
-    		
-    		
-    	}).start();
-    	
 
-    }
+	public void hold() {
 
-    private int do_some_job(){
-		
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				while (progress_status < 10) {
+					progress_status = do_some_job();
+				}
+				handler.post(new Runnable() {
+					@Override
+					public void run() {
+						// TODO ---0 VISIBLE; 4 - INVISIBLE; 8 -GONE ---
+						// pb_sing_in.setVisibility(8);
+					}
+				});
+				progress_status = 0;
+
+			}
+
+		}).start();
+
+	}
+
+	private int do_some_job() {
+
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
@@ -121,16 +118,15 @@ public void hold(){
 			e.printStackTrace();
 		}
 		return ++progress_status;
-		
+
 	}
 
-	
 	public void postData() {
 		// Create a new HttpClient and Post Header
 		HttpClient httpclient = new DefaultHttpClient();
 		HttpPost httppost = new HttpPost(
 				"https://nuestrosprecios.herokuapp.com/api/users/new");
-				//"http://192.168.1.9:8080/api/users/new");
+		// "http://192.168.1.9:8080/api/users/new");
 		httppost.setHeader("Content-Type", "application/json");
 		httppost.setHeader("Accept", "application/json");
 
@@ -140,12 +136,13 @@ public void hold(){
 				params.put("name", name.getText().toString());
 				params.put("email", email.getText().toString());
 				params.put("password", password.getText().toString());
-				params.put("password_confirmation", password_confirmation.getText().toString());
+				params.put("password_confirmation", password_confirmation
+						.getText().toString());
 			} catch (JSONException e1) {
 				e1.printStackTrace();
 			}
-
-			System.out.println("Params: " + params.toString());
+            Log.e("Params: ", params.toString());
+			
 
 			StringEntity entity = new StringEntity(params.toString());
 			httppost.setEntity(entity);
@@ -155,7 +152,7 @@ public void hold(){
 
 			int status = response.getStatusLine().getStatusCode();
 
-			System.out.println("Status: " + status);
+			Log.e("Status: ", String.valueOf(status));
 
 			if (status == 200) {
 
@@ -176,7 +173,7 @@ public void hold(){
 					ex.printStackTrace();
 				}
 
-				System.out.println("finalResult " + sb.toString());
+				Log.e("finalResult " , sb.toString());
 
 			}
 
@@ -187,5 +184,4 @@ public void hold(){
 		}
 	}
 
-    
 }

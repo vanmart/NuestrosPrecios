@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bordenegro"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    android:background="@drawable/bg_img_intro" >
 
     <!--
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -12,22 +12,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     -->
 
-    <LinearLayout
-        android:id="@+id/title_container"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/img_btn_container"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center_horizontal" >
-
-        <TextView
-            android:id="@+id/intro_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:text="@string/customize_welcome"
-            android:textSize="40sp" />
-    </LinearLayout>
+    
 
     <LinearLayout
         android:id="@+id/img_btn_container"
@@ -41,7 +26,8 @@
             android:id="@+id/ibtn_logo_app"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:contentDescription="@string/app_name"
+            android:layout_gravity="center_horizontal"
             android:layout_marginBottom="6dp"
             android:background="@drawable/logo_app_120x120"
             android:onClick="@drawable/logo_app_120x120"
@@ -51,25 +37,31 @@
             android:id="@+id/tv_intro_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
             android:text="@string/intro_message" />
 
         <TextView
-            android:id="@+id/tv_intro_message"
+            android:id="@+id/tv_intro_message2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:text="@string/intro_message2" />
-        <!--
-             <Button
-            android:id="@+id/btn_entrar_intro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/txt_entrar" 
-            />
-        -->
 
+        <TextView
+            android:id="@+id/tv_intro_message3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/intro_message3" />
+        <TextView
+            android:id="@+id/intro_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:text="@string/customize_welcome"
+            android:textSize="40sp" />
+        
     </LinearLayout>
 
     <SlidingDrawer
@@ -83,6 +75,7 @@
             android:id="@+id/handle"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
             android:gravity="center_vertical|center_horizontal"
             android:onClick="@+id/iv_handle"
             android:src="@drawable/flecha" />
@@ -91,46 +84,46 @@
             android:id="@+id/hide_content_sd1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/biohazard"
             android:gravity="center"
+            android:background="@color/transparente"
             android:orientation="vertical" >
 
-                           
-                <LinearLayout
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="vertical" >
-
-                    <Button
-                        android:id="@+id/btn_register"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/bordeblanco"
-                        android:gravity="center_vertical|center_horizontal"
-                        android:text="@string/register"
-                        android:textColor="@color/azul_claro" />
-
-                    <Button
-                        android:id="@+id/btn_log_in"
-                        style="?android:attr/buttonStyleSmall"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/bordeblanco"
-                        android:gravity="center_vertical|center_horizontal"
-                        android:text="@string/log_in"
-                        android:textColor="@color/azul_claro" />
-
-                    <Button
-                        android:id="@+id/view_finder_change"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical|center_horizontal"
-                        android:text="Galeria"
-                        android:background="@drawable/bordeblanco"
-                        android:textColor="@color/azul_claro" />
-                </LinearLayout>
             
+
+                <Button
+                    android:id="@+id/btn_register"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/borde_azul_intro"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/register"
+                    android:textColor="@color/gris_claro" 
+                    android:textSize="20sp"/>
+
+                <Button
+                    android:id="@+id/btn_log_in"
+                    style="?android:attr/buttonStyleSmall"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/borde_azul_intro"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/log_in"
+                    android:textColor="@color/gris_claro" 
+                    android:textSize="20sp"/>
+
+                <Button
+                    android:id="@+id/sd_search_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/borde_azul_intro"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:text="@string/search"
+                    android:textColor="@color/gris_claro" 
+                    android:textSize="20sp"/>
+           
         </LinearLayout>
     </SlidingDrawer>
 
