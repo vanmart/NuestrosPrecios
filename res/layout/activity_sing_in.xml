@@ -14,24 +14,26 @@
        android:handle="@+id/btn_create_account"
        android:visibility="invisible"
        /> -->
-       
+               
    <LinearLayout android:id="@+id/ll_sig_in_container"
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:orientation="vertical"
        android:gravity="center"
-       android:isScrollContainer="true">
+       android:isScrollContainer="true"
+       android:background="@drawable/biohazard">
       
+        <TextView
+            android:id="@+id/register_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_marginTop="31dp"
+            android:text="@string/register"
+            android:textSize="40sp" />
+    
        
-    <TextView
-        android:id="@+id/tv_register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="31dp"
-        android:text="@string/register"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+    
 
     <LinearLayout
         android:id="@+id/ll_main_layout"

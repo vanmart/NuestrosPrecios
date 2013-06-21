@@ -36,7 +36,7 @@ import android.widget.Toast;
 
 public class FinderMozaicActivity extends Activity implements
 		OnItemClickListener {
-
+ //parcero tratar de hacer la estativa hasta el .com y en cada activiti concatenar lo ke falta a la URL segun convenga
 	TextView title;
 	GridView gridv;
 	ImageButton find;

@@ -18,6 +18,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,11 +27,13 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.support.v4.app.NavUtils;
 
 public class Sing_in extends Activity implements OnClickListener {
 	
 	private final String LOG_TAG = "LOG";
+	TextView registrarme;
 	EditText name;
 	EditText email;
 	EditText password;
@@ -45,6 +48,9 @@ public class Sing_in extends Activity implements OnClickListener {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sing_in);
+        registrarme = (TextView)findViewById(R.id.register_title);
+        Typeface font = Typeface.createFromAsset(getAssets(), "berlin-sans-fb-demi-bold.ttf");
+	   	registrarme.setTypeface(font);
         name = (EditText)findViewById(R.id.et_name);
         email = (EditText)findViewById(R.id.et_email);
         password = (EditText)findViewById(R.id.et_password);

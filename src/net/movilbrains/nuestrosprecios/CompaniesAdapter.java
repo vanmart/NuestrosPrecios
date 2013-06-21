@@ -1,10 +1,17 @@
 package net.movilbrains.nuestrosprecios;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.MalformedURLException;
+import java.net.URL;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,11 +61,21 @@ public class CompaniesAdapter extends BaseAdapter {
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
-
+		ImageView iv_company_image = (ImageView) convertView
+				.findViewById(R.id.iv_company_image);
 		TextView txt_item_name = (TextView) convertView
 				.findViewById(R.id.txt_item_name);
+
 		try {
+			Bitmap bitmap = BitmapFactory.decodeStream((InputStream) new URL(
+					obj.getJSONObject("image").getJSONObject("thumb")
+							.getString("url")).getContent());
+			iv_company_image.setImageBitmap(bitmap);
 			txt_item_name.setText(obj.getString("name"));
+		} catch (MalformedURLException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
@@ -74,7 +91,7 @@ public class CompaniesAdapter extends BaseAdapter {
 	}
 	/*
 	 * // create a new ImageView for each item referenced by the Adapter public
-	 * View getView2(int position, View convertView, ViewGroup parent) {
+	 * View getView(int position, View convertView, ViewGroup parent) {
 	 * ImageView imageView; if (convertView == null) { // if it's not recycled,
 	 * initialize some // attributes imageView = new ImageView(mContext);
 	 * imageView.setLayoutParams(new GridView.LayoutParams(150, 100));

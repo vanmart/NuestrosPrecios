@@ -10,7 +10,7 @@
 
   <LinearLayout 
         android:id="@+id/login_container"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
@@ -25,14 +25,14 @@
         
         <EditText 
             android:id="@+id/et_user_name"
-            android:layout_width="match_parent"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:hint="@string/user_name"
             android:background="@drawable/bordeverde"
             android:gravity="center"/>
        <EditText 
            android:id="@+id/et_password"
-           android:layout_width="match_parent"
+           android:layout_width="fill_parent"
            android:layout_height="wrap_content"
            android:hint="@string/password"
            android:background="@drawable/bordeverde"
@@ -50,14 +50,14 @@
             
             <Button 
                 android:id="@+id/btn_send"
-                android:background="@drawable/borde_azul_claro"
+                android:background="@drawable/bordeverde"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/send"
                  />
             <Button 
                 android:id="@+id/btn_cancel"
-                android:background="@drawable/borde_azul_oscuro"
+                android:background="@drawable/bordeverde"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/cancel" 

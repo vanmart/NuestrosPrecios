@@ -32,6 +32,7 @@ public class GalleryView extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gallery_view);
+        
         Gallery gallery = (Gallery) findViewById(R.id.gallery);
         gallery.setAdapter(new ImageAdapter(this));
         gallery.setOnItemClickListener(new OnItemClickListener() {

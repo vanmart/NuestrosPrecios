@@ -25,7 +25,7 @@
         <EditText
             android:id="@+id/et_search_bar"
             android:layout_width="260dp"
-            android:layout_height="fill_parent"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_margin="3dp"
             android:layout_weight="1.17"
@@ -49,13 +49,13 @@
 
         <GridView
             android:id="@+id/gv_mozaic"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:columnWidth="150dp"
             android:gravity="center"
             android:horizontalSpacing="2dp"
-            android:numColumns="3"
+            android:numColumns="auto_fit"
             android:stretchMode="none"
             android:verticalSpacing="2dp" >
         </GridView>
